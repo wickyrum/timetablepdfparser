@@ -1,0 +1,176 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #f5f5f5;
+  color: #1a1a1a;
+  padding: 2rem;
+}
+
+h1 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.subtitle {
+  font-size: 0.8rem;
+  color: #888;
+  margin-bottom: 1.5rem;
+}
+
+/* ── Upload area ─────────────────────────────────────────── */
+
+.upload-area {
+  border: 1.5px dashed #ccc;
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: center;
+  cursor: pointer;
+  background: #fff;
+  transition: border-color 0.2s, background 0.2s;
+  margin-bottom: 1.5rem;
+}
+
+.upload-area:hover  { border-color: #555; background: #fafafa; }
+.upload-area.dragover { border-color: #333; background: #f0f0f0; }
+.upload-area strong { font-size: 0.95rem; color: #333; }
+.upload-area p      { font-size: 0.8rem; color: #999; margin-top: 0.4rem; }
+
+#file-input { display: none; }
+
+/* ── Loading ─────────────────────────────────────────────── */
+
+#loading {
+  display: none;
+  text-align: center;
+  padding: 2rem;
+  color: #888;
+  font-size: 0.85rem;
+}
+
+/* ── Summary cards ───────────────────────────────────────── */
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.stat-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 12px 16px;
+  border: 1px solid #eee;
+}
+
+.stat-card .label { font-size: 0.7rem; color: #888; margin-bottom: 4px; }
+.stat-card .value { font-size: 1.6rem; font-weight: 600; }
+.stat-card .value.flag { color: #c0392b; }
+.stat-card .value.ok   { color: #27ae60; }
+
+/* ── Toolbar ─────────────────────────────────────────────── */
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.filters {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.filters span { font-size: 0.8rem; color: #888; }
+
+.filter-btn {
+  padding: 4px 14px;
+  font-size: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  background: #fff;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.filter-btn:hover  { border-color: #999; color: #333; }
+.filter-btn.active { background: #1a1a1a; color: #fff; border-color: #1a1a1a; }
+
+#export-btn {
+  padding: 5px 14px;
+  font-size: 0.78rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: #fff;
+  cursor: pointer;
+  color: #444;
+}
+
+#export-btn:hover { background: #f5f5f5; }
+
+/* ── Table ───────────────────────────────────────────────── */
+
+.table-wrap {
+  overflow-x: auto;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #eee;
+}
+
+table { width: 100%; border-collapse: collapse; font-size: 0.82rem; }
+
+th {
+  text-align: left;
+  padding: 10px 14px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border-bottom: 1px solid #eee;
+  white-space: nowrap;
+}
+
+td {
+  padding: 10px 14px;
+  border-bottom: 1px solid #f0f0f0;
+  white-space: nowrap;
+}
+
+tr:last-child td { border-bottom: none; }
+tr.flagged       { background: #fff8f7; }
+
+.empty {
+  text-align: center;
+  padding: 3rem;
+  color: #aaa;
+  font-size: 0.85rem;
+}
+
+/* ── Pills ───────────────────────────────────────────────── */
+
+.pill {
+  display: inline-block;
+  padding: 2px 9px;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  margin-right: 3px;
+}
+
+.pill-ah { background: #fde8e8; color: #922b21; }
+.pill-wk { background: #fef3cd; color: #7d6608; }
+.pill-pe { background: #fde8e8; color: #922b21; }
+.pill-ok { background: #e9f7ef; color: #1e8449; }

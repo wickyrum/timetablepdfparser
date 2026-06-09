@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Journal Entry Timing Analyzer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <h1>Journal Entry Timing Analyzer</h1>
+  <p class="subtitle">Upload a CSV export from your accounting system to flag suspicious entries</p>
+
+  <div class="upload-area" id="drop-zone">
+    <strong>Click to upload or drag & drop a CSV</strong>
+    <p>Expected columns: entry_id, timestamp, amount, posted_by, account</p>
+    <input type="file" id="file-input" accept=".csv">
+  </div>
+
+  <div id="loading">Analyzing entries...</div>
+
+  <div class="stats" id="stats" style="display:none">
+    <div class="stat-card">
+      <div class="label">Total entries</div>
+      <div class="value" id="s-total">—</div>
+    </div>
+    <div class="stat-card">
+      <div class="label">After hours</div>
+      <div class="value flag" id="s-ah">—</div>
+    </div>
+    <div class="stat-card">
+      <div class="label">Weekend</div>
+      <div class="value flag" id="s-wk">—</div>
+    </div>
+    <div class="stat-card">
+      <div class="label">Period-end</div>
+      <div class="value flag" id="s-pe">—</div>
+    </div>
+    <div class="stat-card">
+      <div class="label">Total flagged</div>
+      <div class="value flag" id="s-fl">—</div>
+    </div>
+    <div class="stat-card">
+      <div class="label">Clean entries</div>
+      <div class="value ok" id="s-ok">—</div>
+    </div>
+  </div>
+
+  <div id="results-section" style="display:none">
+    <div class="toolbar">
+      <div class="filters">
+        <span>Show:</span>
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="flagged">Flagged only</button>
+        <button class="filter-btn" data-filter="afterhours">After hours</button>
+        <button class="filter-btn" data-filter="weekend">Weekend</button>
+        <button class="filter-btn" data-filter="periodend">Period-end</button>
+      </div>
+      <button id="export-btn">Export flagged ↓</button>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Entry ID</th>
+            <th>Timestamp</th>
+            <th>Amount</th>
+            <th>Posted by</th>
+            <th>Account</th>
+            <th>Flags</th>
+          </tr>
+        </thead>
+        <tbody id="tbody">
+          <tr><td colspan="6" class="empty">No data loaded</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+
+</body>
+</html>

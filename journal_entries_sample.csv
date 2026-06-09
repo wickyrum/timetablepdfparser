@@ -1,0 +1,26 @@
+entry_id,timestamp,amount,posted_by,account
+JE-001,2024-03-28 23:41:00,50000,ravi.k,Misc Expenses
+JE-002,2024-03-29 09:15:00,12500,priya.s,Accounts Payable
+JE-003,2024-03-30 22:05:00,99000,admin,Retained Earnings
+JE-004,2024-03-16 14:30:00,8200,priya.s,Revenue
+JE-005,2024-03-31 00:12:00,150000,ravi.k,Provisions
+JE-006,2024-03-23 11:00:00,5500,meena.r,Travel
+JE-007,2024-03-31 20:55:00,75000,admin,Deferred Revenue
+JE-008,2024-03-10 08:45:00,3200,meena.r,Office Supplies
+JE-009,2024-03-09 16:30:00,18000,ravi.k,Consulting Fees
+JE-010,2024-03-30 03:22:00,200000,admin,Inter-company
+JE-011,2024-03-24 10:15:00,9100,priya.s,Marketing
+JE-012,2024-03-29 21:48:00,45000,ravi.k,Accruals
+JE-013,2024-03-15 13:20:00,6700,meena.r,Rent
+JE-014,2024-03-31 23:59:00,500000,admin,Equity Adjustment
+JE-015,2024-03-17 09:00:00,11000,priya.s,Accounts Receivable
+JE-016,2024-03-22 17:45:00,33000,ravi.k,Depreciation
+JE-017,2024-03-30 21:10:00,88000,admin,Provisions
+JE-018,2024-03-06 10:30:00,4500,meena.r,Stationery
+JE-019,2024-03-29 22:30:00,120000,ravi.k,Loans Payable
+JE-020,2024-03-13 15:00:00,27000,priya.s,Sales Revenue
+JE-021,2024-03-31 19:45:00,95000,admin,Accrued Liabilities
+JE-022,2024-03-07 08:00:00,7800,meena.r,Utilities
+JE-023,2024-03-28 06:15:00,62000,ravi.k,Prepaid Expenses
+JE-024,2024-03-20 11:30:00,15000,priya.s,Commission Expense
+JE-025,2024-03-31 02:44:00,300000,admin,Retained Earnings
